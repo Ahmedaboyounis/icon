@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .iPhone{
+    position: fixed;
+    left: 5px;
+    top: 40%;
+    z-index: 999;
+}
+ .iPhone img{
+    width: 65px;
+    margin-left: 1px;
+ }
+.iPhone h1 , h2, h3{
+    margin: 10px 20px;
+    font-size: 26px;
+    opacity: 0.8;
+}
+.iPhone h1:hover::after{
+    content: "Phone";
+    font-size: 11px;
+    position: absolute;
+    padding: 5px;
+    margin-left: 15px;
+    background: #80777791;
+    margin-top: 6px;
+    border-radius: 5%;
+    color: #fff;
+}
+.iPhone h2:hover::after{
+    content: "whatsapp";
+    font-size: 11px;
+    position: absolute;
+    padding: 5px;
+    margin-left: 15px;
+    background: #80777791;
+    margin-top: 6px;
+    border-radius: 5%;
+    color: #fff;
+}
+.iPhone h3:hover::after{
+    content: "profile";
+    font-size: 11px;
+    position: absolute;
+    padding: 5px;
+    margin-left: 15px;
+    background: #80777791;
+    margin-top: 6px;
+    border-radius: 5%;
+    color: #fff;
+}
+.iPhone a{
+    color: black;
+}
+ .iPhone h1:hover{
+    opacity: 1;
+    text-shadow: 0px 0px 9px rgba(112, 108, 108, 0.818);
+}
+.iPhone h2:hover{
+    opacity: 1;
+    text-shadow: 0px 0px 9px rgba(112, 108, 108, 0.818);
+}.iPhone h3:hover{
+    opacity: 1;
+    text-shadow: 0px 0px 9px rgba(112, 108, 108, 0.818);
+}
+    </style>
+</head>
+<body>
+     <!-- WhatsApp and iPhone" -->
+ <!-- <div class="iPhone animated-image-left">
+    <img src="images/karem.jpg">
+    <h1><a href="tel:+201017916345" class="bi bi-telephone-fill" style=" color: black;"></a></h1>
+    <h2><a href="https://api.whatsapp.com/send?phone=+201017916345&text=DN" class="bi bi-whatsapp" ></a></h2>
+    <h3><a href="profile.html" class="bi bi-exclamation-circle-fill"></a></h3>
+   </div> -->
+    <!-- end WhatsApp and iPhone -->
+
+    <script>
+        // إنشاء عنصر <link> جديد
+const link = document.createElement("link");
+link.rel = "stylesheet";
+link.href = "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css";
+
+// إضافته إلى <head>
+document.head.appendChild(link);
+// إنشاء عنصر div جديد
+const div = document.createElement("div");
+div.className = "iPhone animated-image-left";
+
+// إضافة صورة داخل الـ div
+const img = document.createElement("img");
+img.src = "https://imgur.com/RzhzlGe.jpg";
+
+// إنشاء الروابط مع الأيقونات
+const h1 = document.createElement("h1");
+const telLink = document.createElement("a");
+telLink.href = "tel:+966543928604";
+telLink.className = "bi bi-telephone-fill";
+telLink.style.color = "black";
+h1.appendChild(telLink);
+
+const h2 = document.createElement("h2");
+const whatsappLink = document.createElement("a");
+whatsappLink.href = "https://api.whatsapp.com/send?phone=+966543928604&text=DN";
+whatsappLink.className = "bi bi-whatsapp";
+h2.appendChild(whatsappLink);
+
+const h3 = document.createElement("h3");
+const profileLink = document.createElement("a");
+profileLink.href = "https://fruitart-sa.com/ar/blog";
+profileLink.className = "bi bi-exclamation-circle-fill";
+h3.appendChild(profileLink);
+
+// تجميع العناصر داخل الـ div
+div.appendChild(img);
+div.appendChild(h1);
+div.appendChild(h2);
+div.appendChild(h3);
+
+// إضافة الـ div إلى الـ body أو أي مكان محدد في الصفحة
+document.body.appendChild(div);
+
+
+      </script>
+</body>
+</html>
